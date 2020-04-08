@@ -6,15 +6,15 @@ const path = require("path")
 
 router.route("/current")
 .get(taskController.findAllCurrent)
-.post(taskController.create)
+.post(taskController.create);
 
 //routes for finding complete tasks
  router.route("/completed")
- .get(taskController.findAllCompleted)
+ .get(taskController.findAllCompleted);
 
  //routes for updating tasks
  router.route("/current/:id")
- .put(taskController.update)
+ .put(taskController.update);
 
  // For anything else, render the html page
 router.use(function(req, res) {
