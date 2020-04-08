@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongolab-contoured-49917",
+  process.env.MONGODB_URI || "mongodb+srv://dbUser:jdo8JVUfCASizUSq@lbb-szaqz.mongodb.net/test?retryWrites=true&w=majority",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
