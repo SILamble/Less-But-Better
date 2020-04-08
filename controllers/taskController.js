@@ -3,8 +3,14 @@ const db = require("../models")
 module.export ={
     //find all tasks, by the req.query. 
     // search parameter, i.e complete true or false will come from the req.query
-    findAll: function (req, res) {
-        db.Tasks.find(req.query)
+    findAllCurrent: function (req, res) {
+        db.Tasks.find({complete: false})
+        .then(dbTasks => res.json(dbTasks))
+        .catch(err => res.status(422).json(err))
+    },
+
+    findAllCompleted: function (req, res) {
+        db.Tasks.find({complete: true})
         .then(dbTasks => res.json(dbTasks))
         .catch(err => res.status(422).json(err))
     },

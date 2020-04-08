@@ -40,6 +40,7 @@ As a user I want to keep a to do list and break each item into easier to manage 
 * Node
 * Firebase Authentication 
 * Milligram Style Library 
+* Axios
 
 ### Screenshots
 

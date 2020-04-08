@@ -5,15 +5,15 @@ const path = require("path")
 //routes for new, current incomplete tasks
 
 router.route("/current")
-.get(taskController.findAll)
+.get(taskController.findAllCurrent)
 .post(taskController.create)
 
 //routes for finding complete tasks
- router.route("/saved")
- .get(taskController.findAll)
+ router.route("/completed")
+ .get(taskController.findAllCompleted)
 
  //routes for updating tasks
- router.route("current/:id")
+ router.route("/current/:id")
  .put(taskController.update)
 
  // For anything else, render the html page
