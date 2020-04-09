@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const taskController = require("../controllers/taskController")
+const taskController = require("../controllers/taskController.js")
 const path = require("path")
 
 //routes for new, current incomplete tasks

@@ -1,6 +1,6 @@
 const db = require("../models")
 
-module.export ={
+module.exports ={
     //find all tasks, by the req.query. 
     // search parameter, i.e complete true or false will come from the req.query
     findAllCurrent: function (req, res) {
