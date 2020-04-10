@@ -5,7 +5,6 @@ import Notes from "../Notes"
 function TaskContainer({ task, complete, subtasks, notes }) {
     return (
         <div><h2>Task: {task}</h2>
-        <br></br>
         <h2>Complete: {complete}</h2>
         <SubTaskContainer
         subtasks = {subtasks}/>

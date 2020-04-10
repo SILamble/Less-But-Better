@@ -11,7 +11,7 @@ export default {
     },
     //create a task via api/current route, and passing taskData
     createTask: function(taskData) {
-        return axios.post("api/current", taskData)
+        return axios.post("/current", taskData)
     },
     //update a task via api/current route, find it by the id, and update using the updateData passed to it
     updateTask: function(id, updateData){

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
+import AddBtn from "../../Addbtn"
+import NewTaskForm from "../../NewTaskForm"
 
 
 
@@ -9,11 +11,38 @@ function Current() {
     //task states
     const [currentTasks, setCurrentTasks] = useState([{
       task:"",
-      subtask:[],
+      subtasks:[],
       complete:"",
       notes:"",
       _id:""
     }]);
+
+    const [newTask, setNewTask] = useState([{
+      task:"",
+      subtasks:[],
+      complete:"",
+      notes:"",
+      _id:""
+    }]);;
+
+      //handles inputs from form, and sets these to a newTask object
+    function handleInputChange(event) {
+      const { name, value } = event.target;
+      setNewTask({...newTask, [name]: value})
+    };
+
+    //sends new task to API
+    function handleFormSubmit(event) {
+      event.preventDefault();
+        API.createTask({
+          task: newTask.task,
+          subtasks: newTask.subTask,
+          notes: newTask.notes
+        })
+          .then(res => console.log(newTask))
+          .catch(err => console.log(err));
+      
+    };
 
     //populate component on loading
     useEffect(() => {
@@ -37,6 +66,11 @@ function Current() {
                       />
                   )
                 })}
+                <p></p>
+                <AddBtn/>
+                <NewTaskForm
+                handleFormSubmit = {handleFormSubmit}
+                handleInputChange = {handleInputChange}/>
           </div>
         );
   }
