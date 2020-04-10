@@ -3,7 +3,7 @@ import axios from "axios";
 export default { 
     //get all current tasks via api/current route
     getCurrentTasks: function(){
-        return axios.get("api/current")
+        return axios.get("/current")
     },
     //get all complete tasks via api/completed route
     getCompletedTasks: function(){
