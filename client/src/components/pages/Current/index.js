@@ -3,6 +3,7 @@ import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
 
 
+
 function Current() {
 
     //task states
@@ -21,18 +22,18 @@ function Current() {
       .catch(err => console.log(err));
     }, []);
 
-    console.log("Current tasks:");
-    console.log(currentTasks)
-
         return (
           <div>
             <h1>Welcome to the current tasks page</h1>
               {currentTasks.map(tasks => {
+                console.log("The sub tasks are", tasks.subtasks)
                   return (
                     <TaskContainer
                       key = {tasks._id}
                       task = {tasks.task}
-                      complete = {tasks.complete}
+                      complete = {String(tasks.complete)}
+                      subtasks = {tasks.subtasks}
+                      notes = {tasks.notes}
                       />
                   )
                 })}
