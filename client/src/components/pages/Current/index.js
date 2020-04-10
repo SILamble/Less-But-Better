@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
+import TaskContainer from "../../TaskContainer"
 
 
 function Current() {
@@ -26,6 +27,15 @@ function Current() {
         return (
           <div>
             <h1>Welcome to the current tasks page</h1>
+              {currentTasks.map(tasks => {
+                  return (
+                    <TaskContainer
+                      key = {tasks._id}
+                      task = {tasks.task}
+                      complete = {tasks.complete}
+                      />
+                  )
+                })}
           </div>
         );
   }
