@@ -16,35 +16,35 @@ function NewTaskForm({ handleFormSubmit, handleInputChange }) {
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
-                name="subtask"
+                name="subTask1"
                 onChange={handleInputChange}
             /></p>
             <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
-                name="subtask"
+                name="subTask2"
                 onChange={handleInputChange}
             /></p>
             <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
-                name="subtask"
+                name="subTask3"
                 onChange={handleInputChange}
             /></p>
             <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
-                name="subtask"
+                name="subTask4"
                 onChange={handleInputChange}
             /></p>
             <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
-                name="subtask"
+                name="subTask5"
                 onChange={handleInputChange}
             /></p>
             <p><input

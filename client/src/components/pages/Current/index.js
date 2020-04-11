@@ -11,7 +11,16 @@ function Current() {
     //task states
     const [currentTasks, setCurrentTasks] = useState([{
       task:"",
-      subtasks:[],
+      subTask1:"",
+      st1Complete:"",
+      subTask2:"",
+      st2Complete:"",
+      subTask3:"",
+      st3Complete:"",
+      subTask4:"",
+      st4Complete:"",
+      subTask5:"",
+      st5Complete:"",
       complete:"",
       notes:"",
       _id:""
@@ -19,7 +28,16 @@ function Current() {
 
     const [newTask, setNewTask] = useState([{
       task:"",
-      subtasks:[],
+      subTask1:"",
+      st1Complete:"",
+      subTask2:"",
+      st2Complete:"",
+      subTask3:"",
+      st3Complete:"",
+      subTask4:"",
+      st4Complete:"",
+      subTask5:"",
+      st5Complete:"",
       complete:"",
       notes:"",
       _id:""
@@ -36,7 +54,11 @@ function Current() {
       event.preventDefault();
         API.createTask({
           task: newTask.task,
-          subtasks: newTask.subTask,
+          subTask1: newTask.subTask1,
+          subTask2: newTask.subTask2,
+          subTask3: newTask.subTask3,
+          subTask4: newTask.subTask4,
+          subTask5: newTask.subTask5,
           notes: newTask.notes
         })
           .then(res => console.log(newTask))
@@ -55,19 +77,22 @@ function Current() {
           <div>
             <h1>Welcome to the current tasks page</h1>
               {currentTasks.map(tasks => {
-                console.log("The sub tasks are", tasks.subtasks)
                   return (
                     <TaskContainer
                       key = {tasks._id}
                       task = {tasks.task}
                       complete = {String(tasks.complete)}
-                      subtasks = {tasks.subtasks}
+                      subTask1 = {tasks.subTask1}
+                      subTask2 = {tasks.subTask2}
+                      subTask3 = {tasks.subTask3}
+                      subTask4 = {tasks.subTask4}
+                      subTask5 = {tasks.subTask5}
                       notes = {tasks.notes}
                       />
                   )
                 })}
                 <p></p>
-                <AddBtn/>
+                {/* <AddBtn/> */}
                 <NewTaskForm
                 handleFormSubmit = {handleFormSubmit}
                 handleInputChange = {handleInputChange}/>
