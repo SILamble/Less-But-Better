@@ -43,11 +43,6 @@ function Current() {
       _id:""
     }]);;
 
-    const [updatedTask, setUpdatedTask] = useState({
-      id:"",
-      name:""
-    })
-
       //handles inputs from form, and sets these to a newTask object
     function handleInputChange(event) {
       const { name, value } = event.target;
@@ -86,7 +81,7 @@ function Current() {
       API.getCurrentTasks()
       .then(res => setCurrentTasks(res.data))
       .catch(err => console.log(err));
-    }, []);
+    }, [currentTasks]);
 
     function handleUpdate(id, name, value){
       taskUpdate(id, {[name]:value})
