@@ -66,6 +66,16 @@ function Current() {
       
     };
 
+    //function to check if a subtask is complete or not
+
+    function stComplete(subTaskComplete, compBtn, Completed){
+      if (subTaskComplete === false){
+        return compBtn
+      } else {
+        return Completed
+      }
+    }
+
     //populate component on loading
     useEffect(() => {
       API.getCurrentTasks()
@@ -83,11 +93,17 @@ function Current() {
                       task = {tasks.task}
                       complete = {String(tasks.complete)}
                       subTask1 = {tasks.subTask1}
+                      st1Complete = {tasks.st1Complete}
                       subTask2 = {tasks.subTask2}
+                      st2Complete = {tasks.st2Complete}
                       subTask3 = {tasks.subTask3}
+                      st3Complete = {tasks.st3Complete}
                       subTask4 = {tasks.subTask4}
+                      st4Complete = {tasks.st4Complete}
                       subTask5 = {tasks.subTask5}
+                      st5Complete = {tasks.st5Complete}
                       notes = {tasks.notes}
+                      stComplete = {stComplete}
                       />
                   )
                 })}

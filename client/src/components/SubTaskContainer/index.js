@@ -1,33 +1,39 @@
 import React from "react";
 import CompBtn from "../CompBtn"
+import Completed from "../Completed"
 
-function SubTaskContainer({ _id, subTask1, subTask2, subTask3, subTask4, subTask5 }) {
+function SubTaskContainer({ 
+    task, 
+    _id,
+    complete, 
+    subTask1,
+    st1Complete, 
+    subTask2,
+    st2Complete,  
+    subTask3,
+    st3Complete,  
+    subTask4,
+    st4Complete,  
+    subTask5,
+    st5Complete,
+    stComplete
+}) {
     return (
         <div><div><h3>St1:{subTask1}</h3>
-            <CompBtn
-            _id
-            name = {subTask1}/>
+            {stComplete(st1Complete, <CompBtn />, <Completed />)}
         </div>
-            <div><h3>St2:{subTask2}</h3>
-            <CompBtn
-            _id
-            name = {subTask2}/>
-            </div>
-            <div><h3>St3:{subTask3}</h3>
-            <CompBtn
-            _id
-            name = {subTask3}/>
-            </div>
-            <div><h3>St4:{subTask4}</h3>
-            <CompBtn
-            _id
-            name = {subTask4}/>
-            </div>
-            <div><h3>St5:{subTask5}</h3>
-            <CompBtn
-            _id
-            name = {subTask5}/>
-            </div>
+        <div><h3>St2:{subTask2}</h3>
+            {stComplete(st2Complete, <CompBtn />, <Completed />)}
+        </div>
+        <div><h3>St3:{subTask3}</h3>
+            {stComplete(st3Complete, <CompBtn />, <Completed />)}
+        </div>
+        <div><h3>St4:{subTask4}</h3>
+            {stComplete(st4Complete, <CompBtn />, <Completed />)}
+        </div>
+        <div><h3>St5:{subTask5}</h3>
+            {stComplete(st5Complete, <CompBtn />, <Completed />)}
+        </div>
         </div>
 
     );
