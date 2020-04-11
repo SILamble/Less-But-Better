@@ -4,56 +4,56 @@ import React from "react";
 function NewTaskForm({ handleFormSubmit, handleInputChange }) {
     return (
         <form onSubmit={handleFormSubmit}>
-            <input
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter main task"
                 name="task"
                 onChange={handleInputChange}
-            />
+            /></p>
 
-            <input
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
                 name="subtask"
                 onChange={handleInputChange}
-            />
-            <input
+            /></p>
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
                 name="subtask"
                 onChange={handleInputChange}
-            />
-            <input
+            /></p>
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
                 name="subtask"
                 onChange={handleInputChange}
-            />
-            <input
+            /></p>
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
                 name="subtask"
                 onChange={handleInputChange}
-            />
-            <input
+            /></p>
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Enter a smaller sub task"
                 name="subtask"
                 onChange={handleInputChange}
-            />
-            <input
+            /></p>
+            <p><input
                 className="form-control"
                 type="text"
                 placeholder="Notes"
                 name="notes"
                 onChange={handleInputChange}
-            />
+            /></p>
 
             <button className="btn btn-success" type="submit">
                 Submit
