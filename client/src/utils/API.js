@@ -15,6 +15,6 @@ export default {
     },
     //update a task via api/current route, find it by the id, and update using the updateData passed to it
     updateTask: function(id, updateData){
-        return axios.put("api/current/" + id, updateData)
+        return axios.put("/current/" + id, updateData)
     }
 }

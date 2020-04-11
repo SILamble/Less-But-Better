@@ -13,7 +13,7 @@ router.route("/current")
  .get(taskController.findAllCompleted);
 
  //routes for updating tasks
- router.route("/current/:id")
+ router.route("/current/:_id")
  .put(taskController.update);
 
  // For anything else, render the html page

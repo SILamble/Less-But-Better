@@ -43,6 +43,11 @@ function Current() {
       _id:""
     }]);;
 
+    const [updatedTask, setUpdatedTask] = useState({
+      id:"",
+      name:""
+    })
+
       //handles inputs from form, and sets these to a newTask object
     function handleInputChange(event) {
       const { name, value } = event.target;
@@ -83,6 +88,19 @@ function Current() {
       .catch(err => console.log(err));
     }, []);
 
+    function handleUpdate(id, name, value){
+      taskUpdate(id, {[name]:value})
+
+    }
+
+    function taskUpdate(id, data){
+      console.log("The id being updated is", id);
+      console.log("This is the data being updated", data)
+      API.updateTask(id, data)
+      .then(res => console.log("Task updated"))
+      .catch(err => console.log(err));
+    }
+
         return (
           <div>
             <h1>Welcome to the current tasks page</h1>
@@ -103,11 +121,13 @@ function Current() {
                       subTask5 = {tasks.subTask5}
                       st5Complete = {tasks.st5Complete}
                       notes = {tasks.notes}
+                      _id = {tasks._id}
                       stComplete = {stComplete}
+                      handleUpdate = { handleUpdate}
                       />
                   )
                 })}
-                <p></p>
+                <h1>Add a new task here!</h1>
                 {/* <AddBtn/> */}
                 <NewTaskForm
                 handleFormSubmit = {handleFormSubmit}

@@ -25,7 +25,7 @@ module.exports ={
     update: function (req, res){
         //find a task, by its automatically generate id, passed via
         // params.id and update with the data from req.body
-        db.Tasks.findOneAndUpdate({id: req.params.id}, req.body)
+        db.Tasks.findOneAndUpdate({_id: req.params}, req.body)
         .then(dbTasks => res.json(dbTasks))
         .catch(err => res.status(422).json(err)) 
     }

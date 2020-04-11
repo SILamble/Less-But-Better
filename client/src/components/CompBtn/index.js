@@ -1,8 +1,8 @@
 import React from "react";
 
-function CompBtn({_id, name}) {
+function CompBtn({id, name, value, handleUpdate}) {
   return (
-    <button type="button" >Complete Task</button>
+    <button type="button" onClick={()=> handleUpdate(id, name, value)}>Complete Task</button>
   );
 }
 

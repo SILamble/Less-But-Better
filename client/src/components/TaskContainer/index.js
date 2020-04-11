@@ -16,7 +16,8 @@ function TaskContainer({
     subTask5,
     st5Complete,  
     notes,
-    stComplete
+    stComplete,
+    handleUpdate
 }) {
     return (
         <div><h2>Task: {task}</h2>
@@ -33,7 +34,8 @@ function TaskContainer({
         st4Complete = {st4Complete}
         subTask5 = {subTask5}
         st5Complete = {st5Complete}
-        stComplete = {stComplete}/>
+        stComplete = {stComplete}
+        handleUpdate = { handleUpdate}/>
         <Notes 
         notes = {notes}/>
         </div>
