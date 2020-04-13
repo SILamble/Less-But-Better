@@ -1,3 +1,4 @@
-.navB {
-    background-color: whitesmoke;
-}
+li {
+    display: inline;
+    padding: 8px;
+  }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
-// import AddBtn from "../../Addbtn"
+import AddBtn from "../../Addbtn"
 import NewTaskForm from "../../NewTaskForm"
+import "./style.css"
 
 
 
@@ -108,12 +109,14 @@ function Current() {
       }
 
         return (
-          <div>
-            <h1>Welcome to the current tasks page</h1>
+          <div className = "container">
+            <div className = "row">
+            <h1>Current Tasks</h1></div>
+            
               {currentTasks.map(tasks => {
                   return (
-                    <TaskContainer
-                      key = {tasks._id}
+                      <div className = "taskCont" key = {tasks._id}>
+                      <TaskContainer
                       task = {tasks.task}
                       complete = {String(tasks.complete)}
                       subTask1 = {tasks.subTask1}
@@ -131,13 +134,16 @@ function Current() {
                       stComplete = {stComplete}
                       handleUpdate = { handleUpdate}
                       />
-                  )
+                  </div>)
                 })}
-                <h1>Add a new task here!</h1>
+                
                 {/* <AddBtn/> */}
+                <div className = "taskCont">
+                <h4>Add a new task here!</h4>
                 <NewTaskForm
                 handleFormSubmit = {handleFormSubmit}
                 handleInputChange = {handleInputChange}/>
+                </div>
           </div>
         );
   }

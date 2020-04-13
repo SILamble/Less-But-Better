@@ -20,7 +20,7 @@ function SubTaskContainer({
     handleUpdate
 }) {
     return (
-        <div><div><h3>St1:{subTask1}</h3>
+        <div><div><h3>{subTask1}</h3>
             {stComplete(st1Complete, 
             <CompBtn  
             handleUpdate = { handleUpdate}
@@ -29,7 +29,7 @@ function SubTaskContainer({
             value = {true}/>, 
             <Completed />)}
         </div>
-        <div><h3>St2:{subTask2}</h3>
+        <div><h3>{subTask2}</h3>
             {stComplete(st2Complete,            
             <CompBtn  
             handleUpdate = { handleUpdate}
@@ -38,7 +38,7 @@ function SubTaskContainer({
             value = {true}/>, 
             <Completed />)}
         </div>
-        <div><h3>St3:{subTask3}</h3>
+        <div><h3>{subTask3}</h3>
             {stComplete(st3Complete,            <CompBtn  
             handleUpdate = { handleUpdate}
             id = {_id}
@@ -46,7 +46,7 @@ function SubTaskContainer({
             value = {true}/>, 
             <Completed />)}
         </div>
-        <div><h3>St4:{subTask4}</h3>
+        <div><h3>{subTask4}</h3>
             {stComplete(st4Complete,             <CompBtn  
             handleUpdate = { handleUpdate}
             id = {_id}
@@ -54,7 +54,7 @@ function SubTaskContainer({
             value = {true}/>, 
             <Completed />)}
         </div>
-        <div><h3>St5:{subTask5}</h3>
+        <div><h3>{subTask5}</h3>
             {stComplete(st5Complete,             <CompBtn  
             handleUpdate = { handleUpdate}
             id = {_id}

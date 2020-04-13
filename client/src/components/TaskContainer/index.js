@@ -20,9 +20,10 @@ function TaskContainer({
     handleUpdate
 }) {
     return (
-        <div><h2>Task: {task}</h2>
+        <div className = "row">
+        <div className = "column"><h2>{task}</h2></div>
         {/* <h2>Complete: {complete}</h2> */}
-        <SubTaskContainer
+        <div className = "column"><SubTaskContainer
         _id = {_id}
         subTask1 = {subTask1}
         st1Complete = {st1Complete}
@@ -36,8 +37,9 @@ function TaskContainer({
         st5Complete = {st5Complete}
         stComplete = {stComplete}
         handleUpdate = { handleUpdate}/>
-        <Notes 
-        notes = {notes}/>
+        </div>
+        <div className = "column"><Notes 
+        notes = {notes}/></div>
         </div>
     );
   }

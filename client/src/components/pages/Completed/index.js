@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
-// import AddBtn from "../../Addbtn"
-import NewTaskForm from "../../NewTaskForm"
+import "./style.css"
 
 function Completed() {
 
@@ -24,45 +23,6 @@ function Completed() {
     _id:""
   }]);
 
-  const [newTask, setNewTask] = useState([{
-    task:"",
-    subTask1:"",
-    st1Complete:"",
-    subTask2:"",
-    st2Complete:"",
-    subTask3:"",
-    st3Complete:"",
-    subTask4:"",
-    st4Complete:"",
-    subTask5:"",
-    st5Complete:"",
-    complete:"",
-    notes:"",
-    _id:""
-  }]);;
-
-    //handles inputs from form, and sets these to a newTask object
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setNewTask({...newTask, [name]: value})
-  };
-
-  //sends new task to API
-  function handleFormSubmit(event) {
-    event.preventDefault();
-      API.createTask({
-        task: newTask.task,
-        subTask1: newTask.subTask1,
-        subTask2: newTask.subTask2,
-        subTask3: newTask.subTask3,
-        subTask4: newTask.subTask4,
-        subTask5: newTask.subTask5,
-        notes: newTask.notes
-      })
-        .then(res => console.log(newTask))
-        .catch(err => console.log(err));
-    
-  };
 
   //function to check if a subtask is complete or not
 
@@ -106,32 +66,34 @@ function Completed() {
     }
 
       return (
-        <div>
-          <h1>Welcome to the current tasks page</h1>
-            {completedTasks.map(tasks => {
-                return (
-                  <TaskContainer
-                    key = {tasks._id}
-                    task = {tasks.task}
-                    complete = {String(tasks.complete)}
-                    subTask1 = {tasks.subTask1}
-                    st1Complete = {tasks.st1Complete}
-                    subTask2 = {tasks.subTask2}
-                    st2Complete = {tasks.st2Complete}
-                    subTask3 = {tasks.subTask3}
-                    st3Complete = {tasks.st3Complete}
-                    subTask4 = {tasks.subTask4}
-                    st4Complete = {tasks.st4Complete}
-                    subTask5 = {tasks.subTask5}
-                    st5Complete = {tasks.st5Complete}
-                    notes = {tasks.notes}
-                    _id = {tasks._id}
-                    stComplete = {stComplete}
-                    handleUpdate = { handleUpdate}
-                    />
-                )
-              })}
-        </div>
+        <div className = "container">
+            <div className = "row">
+            <h1>Current Tasks</h1></div>
+            
+              {completedTasks.map(tasks => {
+                  return (
+                      <div className = "taskCont" key = {tasks._id}>
+                      <TaskContainer
+                      task = {tasks.task}
+                      complete = {String(tasks.complete)}
+                      subTask1 = {tasks.subTask1}
+                      st1Complete = {tasks.st1Complete}
+                      subTask2 = {tasks.subTask2}
+                      st2Complete = {tasks.st2Complete}
+                      subTask3 = {tasks.subTask3}
+                      st3Complete = {tasks.st3Complete}
+                      subTask4 = {tasks.subTask4}
+                      st4Complete = {tasks.st4Complete}
+                      subTask5 = {tasks.subTask5}
+                      st5Complete = {tasks.st5Complete}
+                      notes = {tasks.notes}
+                      _id = {tasks._id}
+                      stComplete = {stComplete}
+                      handleUpdate = { handleUpdate}
+                      />
+                  </div>)
+                })}
+          </div>
       );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function Completed() {
   return (
-    <h4>TASK COMPLETED</h4>
+    <h5>TASK COMPLETED</h5>
   );
 }
 

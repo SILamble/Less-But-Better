@@ -6,20 +6,20 @@ function Header() {
   
 
   return (
-    <ul className="navbar-right nav nav-tabs  navB">
+    <div><ul className="navbar-right nav nav-tabs  navB">
       <li className="nav-item">
         <Link className="nav-link"
           to="/Current">
           Current
         </Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item nav2">
         <Link className="nav-link"
           to="/Completed">
           Completed
         </Link>
       </li>
-    </ul>
+    </ul></div>
   );
 }
 
