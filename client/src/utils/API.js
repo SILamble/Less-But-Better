@@ -7,7 +7,7 @@ export default {
     },
     //get all complete tasks via api/completed route
     getCompletedTasks: function(){
-        return axios.get("api/completed")
+        return axios.get("/completed")
     },
     //create a task via api/current route, and passing taskData
     createTask: function(taskData) {

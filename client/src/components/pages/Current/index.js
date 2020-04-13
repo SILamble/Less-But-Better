@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
-import AddBtn from "../../Addbtn"
+// import AddBtn from "../../Addbtn"
 import NewTaskForm from "../../NewTaskForm"
 
 
@@ -79,7 +79,7 @@ function Current() {
     //populate component on loading
     useEffect(() => {
       API.getCurrentTasks()
-      .then(res => setCurrentTasks(res.data))
+      .then(res => setCurrentTasks(res.data) )
       .catch(err => console.log(err));
     }, [currentTasks]);
 
@@ -87,14 +87,25 @@ function Current() {
       taskUpdate(id, {[name]:value})
 
     }
-
     function taskUpdate(id, data){
-      console.log("The id being updated is", id);
-      console.log("This is the data being updated", data)
       API.updateTask(id, data)
-      .then(res => console.log("Task updated"))
-      .catch(err => console.log(err));
+      .then(res => console.log("1 Task updated"))
+      .then(res => compTaskData())
+      .catch(err => console.log(err))
     }
+
+    function compTaskData(){ 
+      if (currentTasks.length > 0){
+        console.log(currentTasks.length)
+      currentTasks.map(tasks=>{
+        let checkArray = [tasks._id, tasks.st1Complete, tasks.st2Complete, tasks.st3Complete, tasks.st4Complete, tasks.st4Complete];
+        let compQ = checkArray.includes(false)
+        if (compQ === false){
+          console.log("2 Top level task complete");
+          setTimeout(taskUpdate(tasks._id, {complete:true}), 5000)
+        }else console.log("3 Top level not yet complete")})}
+        else console.log("There are no tasks to check")
+      }
 
         return (
           <div>
