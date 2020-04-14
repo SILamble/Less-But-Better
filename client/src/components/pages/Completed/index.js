@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
+import { withAuthorization } from "../../Session";
 import "./style.css"
 
 function Completed() {
@@ -68,7 +69,7 @@ function Completed() {
       return (
         <div className = "container">
             <div className = "row">
-            <h1>Current Tasks</h1></div>
+            <h1>Completed Tasks</h1></div>
             
               {completedTasks.map(tasks => {
                   return (
@@ -97,5 +98,5 @@ function Completed() {
       );
 }
 
-  
-  export default Completed;
+const condition = authUser => !!authUser;
+export default withAuthorization(condition)(Completed);

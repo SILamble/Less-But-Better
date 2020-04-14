@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
-import AddBtn from "../../Addbtn"
 import NewTaskForm from "../../NewTaskForm"
+import { withAuthorization } from "../../Session";
 import "./style.css"
 
 
@@ -136,8 +136,6 @@ function Current() {
                       />
                   </div>)
                 })}
-                
-                {/* <AddBtn/> */}
                 <div className = "taskCont">
                 <h4>Add a new task here!</h4>
                 <NewTaskForm
@@ -148,4 +146,5 @@ function Current() {
         );
   }
   
-  export default Current;
+  const condition = authUser => !!authUser;
+  export default withAuthorization(condition)(Current);

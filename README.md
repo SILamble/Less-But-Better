@@ -17,7 +17,7 @@ As a user I want to keep a to do list and break each item into easier to manage 
 * User can add a to do item [x]
 * User is required to add 5 smaller sub tasks [x]
 * User can mark each sub task as complete, & completing all automatically marks up the main task as complete[x]
-* User authentication required to access site []
+* User authentication required to access site [x]
 * User can switch between current tasks in progress and completed tasks [x]
 
 ## Bonus
@@ -25,7 +25,7 @@ As a user I want to keep a to do list and break each item into easier to manage 
 * Notes can be added to each task [x]
 * Images can be added to notes []
 * App works offline []
-* user can track number of complete tasks by defined timescale []
+* User can track number of complete tasks by defined timescale []
 
 ## Process
 
