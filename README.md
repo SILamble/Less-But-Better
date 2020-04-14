@@ -14,15 +14,15 @@ As a user I want to keep a to do list and break each item into easier to manage 
 
 ## MVP
 
-* User can add a to do item []
-* User is required to add 5 smaller sub tasks []
-* User can mark each sub task as complete, & completing all automatically marks up the main task as complete[]
+* User can add a to do item [x]
+* User is required to add 5 smaller sub tasks [x]
+* User can mark each sub task as complete, & completing all automatically marks up the main task as complete[x]
 * User authentication required to access site []
-* User can switch between current tasks in progress and completed tasks []
+* User can switch between current tasks in progress and completed tasks [x]
 
 ## Bonus
 
-* Notes can be added to each task []
+* Notes can be added to each task [x]
 * Images can be added to notes []
 * App works offline []
 * user can track number of complete tasks by defined timescale []
@@ -34,11 +34,11 @@ As a user I want to keep a to do list and break each item into easier to manage 
 
 ## Technologies
 
-* MongoDb (URI mongolab-contoured-49917) 
+* MongoDb
+* MongoDbAtlas
 * Express
 * React
 * Node
-* Firebase Authentication 
 * Milligram Style Library 
 * Axios
 
