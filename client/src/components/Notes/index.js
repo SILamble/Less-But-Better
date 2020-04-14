@@ -6,6 +6,6 @@ function Notes({ notes }) {
         <div><h3>Notes</h3>{notes}
         </div>
     );
-  }
-  
-  export default Notes;
+}
+
+export default Notes;

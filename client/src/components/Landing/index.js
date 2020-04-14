@@ -1,5 +1,5 @@
-import React from 'react';
-import { withAuthorization } from '../Session';
+import React from "react";
+import { withAuthorization } from "../Session";
 const LandingPage = () => (
   <div>
     <h1>Welcome to Less But Better</h1>
