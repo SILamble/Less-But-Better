@@ -44,6 +44,7 @@ class SignInFormBase extends Component {
     const { email, password, error } = this.state;
     const isInvalid = password === '' || email === '';
     return (
+      <div className = "container">
       <form onSubmit={this.onSubmit}>
         <input
           name="email"
@@ -64,6 +65,7 @@ class SignInFormBase extends Component {
         </button>
         {error && <p>{error.message}</p>}
       </form>
+      </div>
     );
   }
 }

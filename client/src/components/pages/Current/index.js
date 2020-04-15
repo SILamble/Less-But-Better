@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
 import NewTaskForm from "../../NewTaskForm"
-import { withAuthorization } from "../../Session";
+import { AuthUserContext, withAuthorization }from "../../Session";
 import "./style.css"
 
 
 
 function Current() {
-
   //task states
   const [currentTasks, setCurrentTasks] = useState([{
     task: "",
