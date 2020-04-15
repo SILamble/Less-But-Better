@@ -10,6 +10,7 @@ import PasswordForgetPage from "./components/PasswordForget";
 import AccountPage from "./components/Account";
 import * as ROUTES from "./constants/routes";
 import { withAuthentication } from "./components/Session";
+require('dotenv').config()
 
 const App = () => (
       <Router>
