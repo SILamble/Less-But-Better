@@ -1,6 +1,6 @@
 # Less-But-Better
 
-A Lean based to do list that requires each to do item to be broken into 5 smaller items, to be tackled individually, with additional notes attached to each main item.
+A Lean to do list that requires each item to be broken into 5 smaller items, to be tackled individually, with additional notes attached to each main item. Tasks cannot be completed without first completed the smaller tasks.
 
 ### Status
 
@@ -49,9 +49,17 @@ As a user I want to keep a to do list and break each item into easier to manage 
 
 XXXX
 ![XXXX]()
-Search Results
+XXXX
 ![XXXX]()
-Saved Books Page
+XXXX
+![XXXX]()
+XXXX
+![XXXX]()
+XXXX
+![XXXX]()
+XXXX
+![XXXX]()
+XXXX
 ![XXXX]()
 
 ## Deployment
