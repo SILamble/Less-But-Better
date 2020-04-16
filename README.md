@@ -24,6 +24,7 @@ As a user I want to keep a to do list and break each item into easier to manage 
 ## Bonus
 
 * Notes can be added to each task [x]
+* Notes can be updated after being added []
 * Images can be added to notes []
 * App works offline []
 * User can track number of complete tasks by defined timescale []
@@ -32,6 +33,20 @@ As a user I want to keep a to do list and break each item into easier to manage 
 
 * Jira project management
 * Balsamiq wireframe 
+
+## Requirements
+
+* Must use ReactJS in some way (even if minimal) [x]
+* Must use a Node and Express Web Server [x]
+* Must be backed by a MySQL or MongoDB Database with a Sequelize or Mongoose ORM [x]
+* Must have both GET and POST routes for retrieving and adding new data [x]
+* Must be deployed using Heroku (with Data) [x]
+* Must utilize at least two libraries, packages, or technologies that we haven’t discussed [x]
+* Must allow for or involve the authentication of users in some way [x]
+* Must have a polished frontend/UI [x]
+* Must have folder structure that meets MVC Paradigm [x]
+* Must meet good quality coding standards (indentation, scoping, naming) [x]
+* Must not expose sensitive API key information on the server [x]
 
 ## Technologies
 
