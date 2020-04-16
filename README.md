@@ -47,20 +47,20 @@ As a user I want to keep a to do list and break each item into easier to manage 
 
 ### Screenshots
 
-XXXX
-![XXXX]()
-XXXX
-![XXXX]()
-XXXX
-![XXXX]()
-XXXX
-![XXXX]()
-XXXX
-![XXXX]()
-XXXX
-![XXXX]()
-XXXX
-![XXXX]()
+Home Page
+![Screenshot - homepage](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/Cap-home.PNG)
+Current Tasks
+![Screenshot - current tasks](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/Cap-current.PNG)
+Completed Tasks
+![Screenshot - completed tasks](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/Cap-completed.PNG)
+Account Page
+![Screenshot - account page](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/cap-account.PNG)
+Sign In Page
+![Screenshot - sign in page](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/cap-signIn.PNG)
+Add New Tasks Page
+![Screenshot - new tasks page](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/Cap-addNew.PNG)
+Directory 
+![Screenshot - directory](https://github.com/SILamble/Less-But-Better/blob/master/assets/screenshots/cap-directory.PNG)
 
 ## Deployment
 
