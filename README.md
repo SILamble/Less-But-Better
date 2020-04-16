@@ -7,7 +7,7 @@ A Lean based to do list that requires each to do item to be broken into 5 smalle
 To do:
 
 * * Refactor firebase authentication to Hooks from Class components
-* * Add user info to database for unique 
+* * Add user info to database for unique user experiences
 
 ## User Story
 
