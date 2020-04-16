@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 
 function NewTaskForm({ handleFormSubmit, handleInputChange }) {
@@ -48,7 +49,7 @@ function NewTaskForm({ handleFormSubmit, handleInputChange }) {
                 onChange={handleInputChange}
             /></p>
             <p><input
-                className="form-control"
+                className="form-control notes"
                 type="text"
                 placeholder="Notes"
                 name="notes"

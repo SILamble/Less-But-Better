@@ -58,6 +58,7 @@ const INITIAL_STATE = {
       username === '';
 
     return (
+      <div className="container">
       <form onSubmit={this.onSubmit}>
           <input
           name="username"
@@ -90,6 +91,7 @@ const INITIAL_STATE = {
         <button disabled={isInvalid} type="submit">Sign Up</button>
         {error && <p>{error.message}</p>}
       </form>
+      </div>
     );
   }
 }
