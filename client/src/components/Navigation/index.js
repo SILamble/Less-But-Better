@@ -13,6 +13,7 @@ const Navigation = ({ authUser }) => (
   </AuthUserContext.Consumer></div>
 );
 
+//navigation options if user signed in
 const NavigationAuth = () => (
   <ul>
     <li>
@@ -32,6 +33,8 @@ const NavigationAuth = () => (
     </li>
   </ul>
 );
+
+//navigation options of user not signed in
 const NavigationNonAuth = () => (
   <ul>
     <li>

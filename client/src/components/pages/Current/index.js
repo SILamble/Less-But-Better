@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../../../utils/API";
 import TaskContainer from "../../TaskContainer"
 import NewTaskForm from "../../NewTaskForm"
-import { AuthUserContext, withAuthorization }from "../../Session";
+import { withAuthorization }from "../../Session";
 import "./style.css"
 
 
@@ -83,17 +83,18 @@ function Current() {
       .catch(err => console.log(err));
   }, [currentTasks]);
 
+  //handleupdate data from subtasks
   function handleUpdate(id, name, value) {
     taskUpdate(id, { [name]: value })
-
   }
+  //send task update data to API route
   function taskUpdate(id, data) {
     API.updateTask(id, data)
       .then(res => console.log("1 Task updated"))
       .then(res => compTaskData())
       .catch(err => console.log(err))
   }
-
+  //logic to check all sub task completion states and update main task if all complete
   function compTaskData() {
     if (currentTasks.length > 0) {
       console.log(currentTasks.length)
