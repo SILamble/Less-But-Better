@@ -90,7 +90,6 @@ function Current() {
   //send task update data to API route
   function taskUpdate(id, data) {
     API.updateTask(id, data)
-      .then(res => console.log("1 Task updated"))
       .then(res => compTaskData())
       .catch(err => console.log(err))
   }
@@ -102,7 +101,6 @@ function Current() {
         let checkArray = [tasks._id, tasks.st1Complete, tasks.st2Complete, tasks.st3Complete, tasks.st4Complete, tasks.st4Complete];
         let compQ = checkArray.includes(false)
         if (compQ === false) {
-          console.log("2 Top level task complete");
           setTimeout(taskUpdate(tasks._id, { complete: true }), 5000)
         } else console.log("3 Top level not yet complete")
       })
